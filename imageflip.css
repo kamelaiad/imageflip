@@ -1,0 +1,51 @@
+body {
+    background-image:  linear-gradient(to right, #2c3e50, #2980b9);
+    perspective: 500px;
+}
+
+.father {
+    height: 300px;
+    width: 300px;
+    border: 4px solid white;
+    border-radius: 40px;
+    position: relative;
+    margin: 150px auto;
+    transform-style:preserve-3d;
+    transition: all 2s ease-in-out;
+    perspective: 500px;
+    box-shadow: 3px 3px 10px  black , -3px -3px 10px  black;
+}
+
+.father:hover {
+    transform: rotateY(180deg) rotateZ(360deg);
+}
+
+.father > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white; 
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 290px;
+    text-align: center;
+    border-radius: 35px;
+    overflow: hidden;
+    
+}
+
+.top {
+    background-color:  #3F5C92;
+    backface-visibility: hidden;
+    z-index: 2;
+}
+
+.back {
+    background-color:  #3F5C92;
+    backface-visibility: hidden;
+    z-index: 1;
+    transform: rotateY(180deg);
+
+}
